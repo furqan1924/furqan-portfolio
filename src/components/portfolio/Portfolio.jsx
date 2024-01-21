@@ -10,12 +10,12 @@ const Portfolio = () => {
   }, []);
   return (
     <>
-      <section className="bg-gray-50 h-full pt-10 md:pt-20" data-aos="fade-up" data-aos-easing="linear"
+
+      <section className="bg-gray-50 h-full pt-10 md:pt-20" data-aos="fade-up" >
+        <div className="grid p-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-4" data-aos-easing="linear"
         data-aos-duration="1000">
-        <div className="grid p-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-4  ">
           <div className="grid grid-cols-subgrid md:col-span-6 sm:col-span-1 w-full ">
             <div className="pt-5 max-w-full md:max-w-100 md:col-span-6 lg:col-start-2 " data-aos="fade-up" data-aos-delay="600">
-
 
               <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <a href="#">

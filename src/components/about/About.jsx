@@ -13,10 +13,10 @@ const About = () => {
       <h2 className='text-center text-2xl font-bold'>About Me</h2>
       <div className="grid p-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-12" data-aos="fade-up"
       data-aos-easing="linear"
-      data-aos-duration="1500">
+      data-aos-duration="1000">
         <div className=" grid grid-cols-subgrid md:col-span-5 sm:col-span-1 lg:col-start-2 w-full ">
           <div className="max-w-full md:col-span-5 " data-aos="fade-right" data-aos-delay="850">
-            <img src={IMAGES.image1} alt="" />
+            <img src={IMAGES.image1} alt="furqanImage" />
           </div>
         </div>
         <div className="grid grid-cols-subgrid md:col-span-5 sm:col-span-1 w-full ">

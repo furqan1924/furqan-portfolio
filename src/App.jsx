@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 import './App.css'
 import { useState } from "react";
 import LodingComp from "./components/LodingComp";
-
+ 
 const App = () => {
   const [loding , setLoding]=  useState(true);
    setTimeout(() =>{
@@ -15,13 +15,15 @@ const App = () => {
   return (
     <>
     {loding? <LodingComp/> :
+    
       <BrowserRouter>
-        <NavBar />
+        <NavBar />    
         <Routes>
           {dynamicManu.map((data, index) => {
             return <Route key={index} exact path={data.link} element={data.element} />;
           })}
         </Routes>
+       
         <Footer/>
       </BrowserRouter>
 }
