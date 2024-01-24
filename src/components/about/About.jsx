@@ -21,7 +21,7 @@ const About = () => {
         </div>
         <div className="grid grid-cols-subgrid md:col-span-5 sm:col-span-1 w-full ">
           <div className="pt-5 max-w-full md:max-w-100 md:col-span-6  " data-aos="fade-up" data-aos-delay="600">
-            <p className="text-xl text-justify text-black-400" data-aos="fade-up" data-aos-delay="700">I have done my Bachelor in Computer Science from Quaid-e-Awam University of Engineering, Science and Technology NawabShah in 2023. Where Where i learnt alot things and choose myself best
+            <p className="text-xl text-justify text-black-400" data-aos="fade-up" data-aos-delay="700">I have done my Bachelor in Computer Science from Quaid-e-Awam University of Engineering, Science and Technology Nawabshah in 2023. Where i learnt alot of things and choose myself best
             fit in programming. I specializing in front-end with React.js and also in back-end with Node.js, Express.js. I am Full Stack (MERN) Web developer at some Software house doing job from November 2023.   </p>
           </div>
         </div>
