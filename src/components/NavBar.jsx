@@ -1,9 +1,12 @@
 import dynamicMenu from "./dynamicManu";
 import { Link } from "react-router-dom";
 import { IMAGES } from "./images";
+import { useState } from "react";
 
 
 const NavBar = () => {
+
+  const [showSidebar, setShowSidebar] = useState(false);
 
   return (
     <>
@@ -61,27 +64,62 @@ const NavBar = () => {
               </svg>
 
             </a>
-            <a className="navbar-burger self-center mr-12 xl:hidden" href="#">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 hover:text-gray-200"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            </a>
+            <div className="navbar-burger self-center mr-12 xl:hidden" >
+
+              {/* SideBar */}
+
+              {showSidebar ? (
+
+                <div className={`top-0 right-0 w-[80vw] bg-black  pt-5 px-10 pl-15 text-white fixed h-full z-40  
+                  }`}>
+
+                  <button onClick={() => setShowSidebar(false)}
+                    type="button" className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset">
+                    <span className="sr-only">Close menu</span>
+
+                    <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                  <h3 className="my-10 text-4xl font-semibold text-white">Furqan</h3>
+
+                  <ul className="px-4  mx-auto text-center font-bold font-heading space-y-12">
+                    {dynamicMenu.map((data, index) => {
+                      return (
+                        <li onClick={() => setShowSidebar(false)}  key={index}>
+                          <Link className="cursor-pointer hover:text-gray-200 rounded-full text-xl hover:bg-red-700 py-5 px-14 " to={data.link}>
+                            {data.name}
+
+                          </Link>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              ) : (
+                <svg
+                  onClick={() => setShowSidebar(true)}
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6 hover:text-gray-200"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              )}
+
+            </div>
           </nav>
         </section>
       </div>
       {/* <!-- Does this resource worth a follow? --> */}
-      <div className="absolute bottom-0 right-0 mb-4 mr-4 z-10">
+      <div className="bottom-0 fixed right-0 mb-4 mr-4 z-10">
         <div>
           <button
             title="Follow me on twitter"

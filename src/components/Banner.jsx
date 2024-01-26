@@ -10,8 +10,8 @@ const Banner = () => {
   }, []);
   return (
     <>
-      <section className="mt-19 myBackground h-full  py-40" >
-        <div className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-4  ">
+      <section className="myBackground h-full  md:mt-16 pt-24 md:p-20" >
+        <div className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-4 ">
           <div className="grid md:order-1 order-2 grid-cols-subgrid md:col-span-6 sm:col-span-1 w-full ">
             <div className="pt-25 p-8 md:pl-24 max-w-full md:max-w-100 md:col-span-6 lg:col-start-2 " data-aos="fade-up" data-aos-delay="600">
               <p className="text-xl font-bold text-red-400" data-aos="fade-up" data-aos-delay="700">Web Developer</p>
