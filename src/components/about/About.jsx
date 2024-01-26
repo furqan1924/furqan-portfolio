@@ -10,7 +10,7 @@ const About = () => {
   return (
     < > 
     <section className="bg-gray-300 h-full pt-6 md:p-20  "  >
-      <h2 className='text-center text-2xl font-bold'>About Me</h2>
+      <h2 className='text-center mt-16 text-2xl font-bold'>About Me</h2>
       <div className="grid p-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-12" data-aos="fade-up"
       data-aos-easing="linear"
       data-aos-duration="1000">

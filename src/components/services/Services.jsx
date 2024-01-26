@@ -10,8 +10,8 @@ const Services = () => {
   return (
     <>
       <section className="bg-gray-100 h-full pt-6 text-justify  md:p-20 " >
-        <h1 className='text-center font-bold p-2 text-2xl text-black-400'>My Awesome Service</h1>
-        <p className='text-center  font-18 pt-2 p-5' >These are my services, I deliver as per your ideas in all of my services with my expertise and experence.</p>
+        <h1 className='text-center font-bold p-2 mt-16 text-2xl text-black-400'>My Awesome Service</h1>
+        <p className='text-center  font-18 pt-2  p-5' >These are my services, I deliver as per your ideas in all of my services with my expertise and experence.</p>
         <div className=" p-8 grid grid-cols-1 md:grid-cols-15" data-aos="fade-up"
           data-aos-easing="linear"
           data-aos-duration="1000">

@@ -119,7 +119,7 @@ const NavBar = () => {
         </section>
       </div>
       {/* <!-- Does this resource worth a follow? --> */}
-      <div className="bottom-0 fixed right-0 mb-4 mr-4 z-10">
+      {/* <div className="bottom-0 fixed right-0 mb-4 mr-4 z-10">
         <div>
           <button
             title="Follow me on twitter"
@@ -132,7 +132,7 @@ const NavBar = () => {
             />
           </button>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };
