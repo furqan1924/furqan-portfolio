@@ -7,6 +7,28 @@ import { useState } from "react";
 const NavBar = () => {
 
   const [showSidebar, setShowSidebar] = useState(false);
+  const [visible, setVisible] = useState(false)
+
+  const toggleVisible = () => {
+    const scrolled = document.documentElement.scrollTop;
+    if (scrolled > 300) {
+      setVisible(true)
+    }
+    else if (scrolled <= 300) {
+      setVisible(false)
+    }
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+      /* you can also use 'auto' behaviour 
+         in place of 'smooth' */
+    });
+  };
+
+  window.addEventListener('scroll', toggleVisible);
 
   return (
     <>
@@ -86,7 +108,7 @@ const NavBar = () => {
                   <ul className="px-4  mx-auto text-center font-bold font-heading space-y-12">
                     {dynamicMenu.map((data, index) => {
                       return (
-                        <li onClick={() => setShowSidebar(false)}  key={index}>
+                        <li onClick={() => setShowSidebar(false)} key={index}>
                           <Link className="cursor-pointer hover:text-gray-200 rounded-full text-xl hover:bg-red-700 py-5 px-14 " to={data.link}>
                             {data.name}
 
@@ -119,20 +141,24 @@ const NavBar = () => {
         </section>
       </div>
       {/* <!-- Does this resource worth a follow? --> */}
-      {/* <div className="bottom-0 fixed right-0 mb-4 mr-4 z-10">
+      <div className="bottom-0 fixed right-0 mb-4 mr-4 z-10">
         <div>
           <button
+            onClick={scrollToTop}
+            style={{ display: visible ? 'inline' : 'none' }}
             title="Follow me on twitter"
             type="button"
-            className="block w-16 h-16 rounded-full transition-all shadow hover:shadow-lg transform hover:scale-110 hover:rotate-12"
+            className="bg-red-600 block w-14 h-14 rounded-full transition-all shadow hover:shadow-lg transform hover:scale-110 "
           >
-            <img
-              className="object-cover object-center w-full h-full rounded-full"
-              src="https://www.imore.com/sites/imore.com/files/styles/large/public/field/image/2019/12/twitter-logo.jpg"
-            />
+          <svg className="w-[30px] ml-3 h-[40px] fill-[#f2eeee]" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+
+  {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
+  <path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"></path>
+
+</svg>
           </button>
         </div>
-      </div> */}
+      </div>
     </>
   );
 };
